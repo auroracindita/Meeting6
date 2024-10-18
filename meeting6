@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct MHS{
+    int NIM;
+    int UTS;
+    int UAS;
+};
+
+int main(){
+    MHS rapor[51];
+    int n;
+    //INPUT
+    cout << "Enter the number of students: ";
+    cin >> n;
+    for(int i = 0; i < n; i++){  
+        cin >> rapor[i].NIM;
+        cin >> rapor[i].UTS;
+        cin >> rapor[i].UAS;
+    }
+    //Output
+    for(int i = 0; i < n; i++){  
+        cout << "NIM: " << rapor[i].NIM << endl;
+        double x = rapor[i].UTS + rapor[i].UAS;
+        cout << "Average: " << x / 2 << endl;  
+    }
+    
+    return 0;
+}
